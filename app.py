@@ -65,10 +65,31 @@ def calculation():
 def homepage():
     name="Mrs Akinfolaju"
     email="peju@yahoo.com"
-    collect="Details are:" +str(email) +str(name)
-    return render_template('homepage.html', collect=collect)
-    
+    collect=str(email) + " " +str(name)
+    #return "these are our details " + str(collect)
+    #return render_template('homepage.html', collect=collect)
+    return "<h1>these are the details:</h1> " + str(collect)
 
+
+@app.route('/school')
+def school():
+    name="oduduwa university"
+    address="ile-ife osunstate"
+    number="08144289424"
+    collect=str(address) + " " +str(name) + " " + str(number)
+    #return "these are our details " + str(collect)
+    #return render_template('homepage.html', collect=collect)
+    return "<h1>these are the details:</h1> " + str(collect)
+
+@app.route('/state')
+def state():
+    state1="lagos"
+    state2="rivers"
+    state3="crossriver"
+    collect=str(state1) + " " +str(state2) + " " + str(state3)
+    #return "these are our details " + str(collect)
+    #return render_template('homepage.html', collect=collect)
+    return "<h1>these are the details:</h1> " + str(collect)
 
 
 
